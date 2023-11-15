@@ -1,0 +1,448 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'IntegralCF-Bold';
+    src: url('./Fonts/Webfont/IntegralCF-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntegralCF-BoldOblique';
+    src: url('./Fonts/Webfont/IntegralCF-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntegralCF-DemiBold';
+    src: url('./Fonts/Webfont/IntegralCF-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntegralCF-DemiBoldOblique';
+    src: url('./Fonts/Webfont/IntegralCF-DemiBoldOblique.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntegralCF-ExtraBold';
+    src: url('./Fonts/Webfont/IntegralCF-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntegralCF-ExtraBoldOblique';
+    src: url('./Fonts/Webfont/IntegralCF-ExtraBoldOblique.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntegralCF-Heavy';
+    src: url('./Fonts/Webfont/IntegralCF-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntegralCF-HeavyOblique';
+    src: url('./Fonts/Webfont/IntegralCF-HeavyOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntegralCF-Medium';
+    src: url('./Fonts/Webfont/IntegralCF-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntegralCF-MediumOblique';
+    src: url('./Fonts/Webfont/IntegralCF-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntegralCF-Regular';
+    src: url('./Fonts/Webfont/IntegralCF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntegralCF-RegularOblique';
+    src: url('./Fonts/Webfont/IntegralCF-RegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.bg-gradient-login-button {
+    background-image: linear-gradient(to right, #0C166A 0%, #0C135F 40%, #621C80 100%);
+}
+
+.hover\:bg-gradient-login-button:hover {
+    background-image: linear-gradient(to right, #090A35, #090A35);
+}
+
+.bg-login-image {
+    background-image: url('/src/images/Login Background.png');
+}
+
+.bg-countdown-image {
+    background-image: url('/src/images/Countdown Background.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Make sure the background covers the entire container */
+    background-position: center center; /* Center the background */
+    background-attachment: fixed; /* This will make the background fixed when scrolling */
+}
+
+/* ========== GLOBAL STYLES ========== */
+.text-gold {
+    color: #f3b80e;
+}
+
+.custom-border {
+    border: 1px solid #1EA1F2;
+}
+
+.table-hover {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.table-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== MARKETPLACE TABLE ========== */
+.marketplace-table {
+    margin-left: -0px;
+}
+
+.marketplace-table th,
+.marketplace-table td {
+    width: 16%;
+    max-width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.marketplace-table th {
+    border-bottom: 1px solid #b1b1b1;
+}
+
+.marketplace-table tbody td {
+    padding-top: 10px;
+}
+
+.marketplace-table tbody tr {
+    border-bottom: 10px solid transparent;
+}
+
+/* Padding for every column from 'Followers' onwards */
+.marketplace-table th:nth-child(n+2),
+.marketplace-table td:nth-child(n+2) {
+    padding-right: 80px;
+}
+
+/* For headers alignment */
+.marketplace-table th:nth-child(1) {
+    width: 15%;
+    max-width: 15%;
+}
+
+.marketplace-table th:nth-child(n+2) {
+    width: 15%;
+    max-width: 15%;
+    padding-right: 80px;
+}
+
+
+/* ========== TABLE RESPONSIVE STYLES ========== */
+.table-responsive {
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #ffffff0f;
+    border-radius: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #d8d8d818;
+    border-radius: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.hidden-scrollbar {
+    overflowY: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and newer versions of Edge */
+}
+
+
+
+/* ========== INFO SLIDE OUT ========== */
+.infoSlideoutMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 30%;
+    height: 100%;
+    background: #090A35;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.infoSlideoutMenu.active {
+    transform: translateX(0);
+}
+
+.infoSlideoutMenu p span:first-child {
+    color: #f3b80e;
+}
+
+.stars-wrapper {
+    margin-left: 0.5rem;
+}
+
+.header-underline {
+    border-bottom: 2px solid #f3b80e;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* ========== Up Coming STYLES ========== */
+
+.default-card {
+    @apply bg-[#120f5e] p-4 rounded-lg shadow-md border-2 border-[#1ea1ee] relative;
+    box-shadow: 2px 4px 10px rgb(0, 0, 0);
+    width: 280px;
+    height: 210px;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.default-card:hover {
+    transform: scale(1.05); /* Scale up the card slightly when hovered */
+}
+
+
+.default-card .card-title {
+    @apply text-[#fefefec2] absolute -bottom-8 left-0 font-integralcf-extrabold text-xs tracking-wider whitespace-nowrap;
+}
+
+.half-vertical-gradient {
+    background-color: #1ea1f2;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+/* ========== NAV BAR STYLES ========== */
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+
+.custom-button {
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.custom-button:hover {
+    color: #1EA1F2; /* Text color on hover */
+    border-color: #1EA1F2; /* Border color on hover */
+}
+
+.menu-button {
+    color: #1EA1F2;
+    transform: scale(2.7); /* Set the default size */
+    margin-left: auto; /* Push the button to the far right */
+    cursor: pointer;
+    transition: transform 0.3s ease-out; /* Corrected the missing 's' for the duration */
+}
+
+.menu-button:hover {
+    transform: scale(2.9); /* Increase the size on hover */
+}
+
+
+/* ========== SLIDE OUT MENU STYLES ========== */
+.slideout-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 30%;
+    height: 100%;
+    background: #090A35;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.submenu.active {
+    display: block;
+}
+
+.slideout-menu span.cursor-pointer {
+    position: absolute;
+    top: 35px;
+    right: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.slideout-menu span.cursor-pointer.close-icon:hover {
+    color: #1EA1F2;
+}
+
+.slideout-menu .selected-menu-item {
+    color: #1EA1F2;
+    border: 2px solid #1EA1F2;
+    border-radius: 4px;
+    padding: 5px;
+    display: inline-block;
+}
+
+/* ========== Table Headers Spacing ========== */
+.custom-id {
+    margin-left: 115px;
+}
+
+.custom-set {
+    padding-left: 155px;
+}
+
+.custom-card {
+    padding-left: 195px;}
+
+.custom-grade {
+    padding-left: 170px;}
+
+.custom-current-bid {
+    padding-left: 145px;}
+
+.custom-bid {
+    padding-left: 185px;}
+
+.custom-rank {
+    margin-left: 70px;
+}
+
+.custom-followers {
+    padding-left: 78px;
+}
+
+.custom-category {
+    padding-left: 130px;
+}
+
+.custom-user {
+    padding-left: 150px;
+}
+
+.custom-location {
+    padding-left: 160px;
+}
+
+.custom-inventory {
+    padding-left: 130px;
+}
+
+.custom-status {
+    padding-left: 140px;
+}
+
+/* ========== NAV Bar slide out menu ========== */
+
+.mainMenuSlideout {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initially hidden to the left */
+    width: 400px; /* Width of the menu */
+    height: 100vh;
+    background: #090A35;
+    transition: left 0.3s ease;
+    z-index: 100;
+}
+
+.mainMenuSlideout.active {
+    left: 0; /* Menu is visible when active */
+}
+
+.menu-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menu-item-left {
+    flex: 1;
+    text-align: left;
+}
+
+.menu-item-right {
+    flex: 1;
+    text-align: right;
+}
+
+.close-icon-mm {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
