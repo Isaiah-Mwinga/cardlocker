@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* Slide-out menu */}
       <div className={menuOpen ? "mainMenuSlideout active" : "mainMenuSlideout"}>
       <div className="menu-top-section">
-        <div className="menu-item-left">Menu Item 1</div>
+        <div className="menu-item-left">Menu Items 1</div>
         <div className="menu-item-right">
             <span className="cursor-pointer close-icon-mm" onClick={() => setMenuOpen(false)}>X</span>
         </div>
